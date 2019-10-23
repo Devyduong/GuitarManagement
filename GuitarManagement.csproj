@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonDefine\CommonDefines.cs" />
+    <Compile Include="CommonDefine\CommonFunction.cs" />
     <Compile Include="CommonDefine\DefineMessage.cs" />
     <Compile Include="DataAccess\BILL.cs" />
     <Compile Include="DataAccess\BILLDETAIL.cs" />
@@ -139,6 +140,7 @@
     <Content Include="Images\background_loginform.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ProductImages\" />
     <Folder Include="Sale\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

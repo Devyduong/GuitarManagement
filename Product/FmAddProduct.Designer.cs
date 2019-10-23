@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmAddProduct));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lbFunctionName = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -47,18 +50,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.btnDashboard = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.pbAvatar = new System.Windows.Forms.PictureBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.btnLoadImage = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tbDescription = new System.Windows.Forms.RichTextBox();
-            this.lbPhotoName = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.tbManufactor = new System.Windows.Forms.TextBox();
@@ -73,8 +65,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbPhotoName = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.btnLoadImage = new System.Windows.Forms.Button();
+            this.pbAvatar = new System.Windows.Forms.PictureBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.tbDescription = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -86,14 +88,12 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel5.SuspendLayout();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            this.panel10.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -120,6 +120,40 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1213, 54);
             this.panel7.TabIndex = 2;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.pictureBox8);
+            this.panel9.Controls.Add(this.btnDashboard);
+            this.panel9.Location = new System.Drawing.Point(948, 6);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(126, 41);
+            this.panel9.TabIndex = 4;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 6;
+            this.pictureBox8.TabStop = false;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnDashboard.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 0);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(121, 41);
+            this.btnDashboard.TabIndex = 4;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // pictureBox7
             // 
@@ -296,40 +330,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.pictureBox8);
-            this.panel9.Controls.Add(this.btnDashboard);
-            this.panel9.Location = new System.Drawing.Point(948, 6);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(126, 41);
-            this.panel9.TabIndex = 4;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(36, 33);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 6;
-            this.pictureBox8.TabStop = false;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnDashboard.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 0);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(121, 41);
-            this.btnDashboard.TabIndex = 4;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.panel10);
@@ -341,94 +341,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1343, 613);
             this.panel5.TabIndex = 3;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.MintCream;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.tbDescription);
-            this.panel11.Controls.Add(this.label8);
-            this.panel11.Location = new System.Drawing.Point(488, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(470, 605);
-            this.panel11.TabIndex = 0;
-            // 
-            // pbAvatar
-            // 
-            this.pbAvatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbAvatar.BackgroundImage")));
-            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAvatar.Location = new System.Drawing.Point(963, 1);
-            this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Size = new System.Drawing.Size(372, 518);
-            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAvatar.TabIndex = 1;
-            this.pbAvatar.TabStop = false;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.pictureBox9);
-            this.panel12.Controls.Add(this.btnLoadImage);
-            this.panel12.Location = new System.Drawing.Point(968, 564);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(372, 41);
-            this.panel12.TabIndex = 8;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(5, 5);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(42, 30);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 6;
-            this.pictureBox9.TabStop = false;
-            // 
-            // btnLoadImage
-            // 
-            this.btnLoadImage.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnLoadImage.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadImage.ForeColor = System.Drawing.Color.White;
-            this.btnLoadImage.Location = new System.Drawing.Point(0, 0);
-            this.btnLoadImage.Name = "btnLoadImage";
-            this.btnLoadImage.Size = new System.Drawing.Size(367, 41);
-            this.btnLoadImage.TabIndex = 8;
-            this.btnLoadImage.Text = "Upload ảnh sản phẩm";
-            this.btnLoadImage.UseVisualStyleBackColor = false;
-            this.btnLoadImage.Click += new System.EventHandler(this.btnLoadImage_Click);
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.SkyBlue;
-            this.label8.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(0, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(469, 28);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "MÔ TẢ CHI TIẾT VỀ SẢN PHẨM";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tbDescription
-            // 
-            this.tbDescription.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDescription.Location = new System.Drawing.Point(1, 38);
-            this.tbDescription.Name = "tbDescription";
-            this.tbDescription.Size = new System.Drawing.Size(464, 559);
-            this.tbDescription.TabIndex = 7;
-            this.tbDescription.Text = "";
-            // 
-            // lbPhotoName
-            // 
-            this.lbPhotoName.AutoSize = true;
-            this.lbPhotoName.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPhotoName.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbPhotoName.Location = new System.Drawing.Point(964, 532);
-            this.lbPhotoName.Name = "lbPhotoName";
-            this.lbPhotoName.Size = new System.Drawing.Size(64, 19);
-            this.lbPhotoName.TabIndex = 9;
-            this.lbPhotoName.Text = "Tên ảnh";
             // 
             // panel10
             // 
@@ -468,6 +380,7 @@
             // 
             this.tbManufactor.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbManufactor.Location = new System.Drawing.Point(140, 248);
+            this.tbManufactor.MaxLength = 100;
             this.tbManufactor.Name = "tbManufactor";
             this.tbManufactor.Size = new System.Drawing.Size(326, 25);
             this.tbManufactor.TabIndex = 4;
@@ -487,6 +400,7 @@
             // 
             this.tbNumber.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNumber.Location = new System.Drawing.Point(140, 369);
+            this.tbNumber.MaxLength = 10;
             this.tbNumber.Name = "tbNumber";
             this.tbNumber.Size = new System.Drawing.Size(326, 25);
             this.tbNumber.TabIndex = 6;
@@ -506,6 +420,7 @@
             // 
             this.tbPrice.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPrice.Location = new System.Drawing.Point(140, 310);
+            this.tbPrice.MaxLength = 10;
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(326, 25);
             this.tbPrice.TabIndex = 5;
@@ -545,6 +460,7 @@
             // 
             this.tbName.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbName.Location = new System.Drawing.Point(140, 126);
+            this.tbName.MaxLength = 100;
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(326, 25);
             this.tbName.TabIndex = 2;
@@ -564,6 +480,7 @@
             // 
             this.tbId.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbId.Location = new System.Drawing.Point(140, 70);
+            this.tbId.MaxLength = 15;
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(326, 25);
             this.tbId.TabIndex = 1;
@@ -578,6 +495,94 @@
             this.label1.Size = new System.Drawing.Size(101, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã sản phẩm";
+            // 
+            // lbPhotoName
+            // 
+            this.lbPhotoName.AutoSize = true;
+            this.lbPhotoName.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhotoName.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbPhotoName.Location = new System.Drawing.Point(964, 532);
+            this.lbPhotoName.Name = "lbPhotoName";
+            this.lbPhotoName.Size = new System.Drawing.Size(64, 19);
+            this.lbPhotoName.TabIndex = 9;
+            this.lbPhotoName.Text = "Tên ảnh";
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.pictureBox9);
+            this.panel12.Controls.Add(this.btnLoadImage);
+            this.panel12.Location = new System.Drawing.Point(968, 564);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(372, 41);
+            this.panel12.TabIndex = 8;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(5, 5);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(42, 30);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 6;
+            this.pictureBox9.TabStop = false;
+            // 
+            // btnLoadImage
+            // 
+            this.btnLoadImage.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLoadImage.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadImage.ForeColor = System.Drawing.Color.White;
+            this.btnLoadImage.Location = new System.Drawing.Point(0, 0);
+            this.btnLoadImage.Name = "btnLoadImage";
+            this.btnLoadImage.Size = new System.Drawing.Size(367, 41);
+            this.btnLoadImage.TabIndex = 8;
+            this.btnLoadImage.Text = "Upload ảnh sản phẩm";
+            this.btnLoadImage.UseVisualStyleBackColor = false;
+            this.btnLoadImage.Click += new System.EventHandler(this.btnLoadImage_Click);
+            // 
+            // pbAvatar
+            // 
+            this.pbAvatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbAvatar.BackgroundImage")));
+            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbAvatar.Location = new System.Drawing.Point(963, 1);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Size = new System.Drawing.Size(372, 518);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvatar.TabIndex = 1;
+            this.pbAvatar.TabStop = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.MintCream;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.tbDescription);
+            this.panel11.Controls.Add(this.label8);
+            this.panel11.Location = new System.Drawing.Point(488, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(470, 605);
+            this.panel11.TabIndex = 0;
+            // 
+            // tbDescription
+            // 
+            this.tbDescription.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDescription.Location = new System.Drawing.Point(1, 38);
+            this.tbDescription.Name = "tbDescription";
+            this.tbDescription.Size = new System.Drawing.Size(464, 559);
+            this.tbDescription.TabIndex = 7;
+            this.tbDescription.Text = "";
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.SkyBlue;
+            this.label8.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label8.Location = new System.Drawing.Point(0, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(469, 28);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "MÔ TẢ CHI TIẾT VỀ SẢN PHẨM";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FmAddProduct
             // 
@@ -595,6 +600,8 @@
             this.Text = "FmAddProduct";
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -606,16 +613,14 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
-            this.panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

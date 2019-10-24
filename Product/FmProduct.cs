@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using GuitarManagement.Enums;
 using GuitarManagement.CommonDefine;
 using GuitarManagement.DataAccess;
+using System.IO;
 
 namespace GuitarManagement.Product
 {
@@ -20,13 +21,14 @@ namespace GuitarManagement.Product
         {
             InitializeComponent();
             InitData();
-
         }
         // Khởi tạo các giá trị ban đầu cho form
         private void InitData()
         {
             // Gán tên chức năng
             lbFunctionName.Text = CommonDefines.PRODUCT_MANAGEMENT;
+            // Load data for dataGridView
+            loadAllProduct();
             // Đặt giá trị cho combobox
             List<string> lst = new List<string>();
             lst.Add("Tất cả sản phẩm");
@@ -34,12 +36,14 @@ namespace GuitarManagement.Product
             lst.Add("Tìm kiếm theo tên");
 
             cbbSearch.DataSource = lst;
-
+        }
+        private void loadAllProduct()
+        {
             // Load data for dataGridView
             List<PRODUCT> lstProduct = new List<PRODUCT>();
             lstProduct = db.PRODUCTs.Select(d => d).OrderBy(d => d.ID).ToList();
             int i = 0;
-            foreach(PRODUCT pr in lstProduct)
+            foreach (PRODUCT pr in lstProduct)
             {
                 i = dgvList.Rows.Add();
                 dgvList.Rows[i].Cells[0].Value = pr.ID;
@@ -49,6 +53,10 @@ namespace GuitarManagement.Product
                 dgvList.Rows[i].Cells[4].Value = pr.PRICE;
                 dgvList.Rows[i].Cells[5].Value = pr.NUMBER;
             }
+        }
+        private void clearDataGridView()
+        {
+            dgvList.Rows.Clear();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -60,7 +68,22 @@ namespace GuitarManagement.Product
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            //try
+            //{
+                string productId = dgvList.CurrentRow.Cells["ColId"].Value.ToString();
+                PRODUCT product = db.PRODUCTs.Where(p => p.ID.Equals(productId)).FirstOrDefault();
+                if (product == null)
+                {
+                    MessageBox.Show(DefineMessage.RECORD_NOT_EXIST, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                FmEditProduct fmEdit = new FmEditProduct(product);
+                fmEdit.Show();
+                this.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(DefineMessage.ERROR_OCCURED, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //}
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
@@ -75,6 +98,11 @@ namespace GuitarManagement.Product
 
                     db.PRODUCTs.Remove(product);
                     await db.SaveChangesAsync();
+
+                    dgvList.Rows.Remove(dgvList.CurrentRow);
+                    MessageBox.Show(DefineMessage.DELETE_RECORD_SUCCESSFUL, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    File.Delete(CommonFunction.getProductImagePath() + product.IMAGES);
                 }
             }
             catch(Exception ex)
@@ -85,7 +113,10 @@ namespace GuitarManagement.Product
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
-
+            string currentId = getCurrentIdSelected();
+            FmDetail detail = new FmDetail(currentId);
+            detail.Show();
+            this.Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -98,6 +129,54 @@ namespace GuitarManagement.Product
         private string getCurrentIdSelected()
         {
             return dgvList.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void cbbSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbSearch.SelectedItem.ToString().Equals("Tất cả sản phẩm"))
+            {
+                clearDataGridView();
+                loadAllProduct();
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            string dataSearch = tbSearch.Text;
+            if (cbbSearch.SelectedItem.ToString().Equals("Tìm kiếm theo Id"))
+            {
+                clearDataGridView();
+                List<PRODUCT> rs = db.PRODUCTs.Where(p => p.ID.Equals(dataSearch)).ToList();
+                if (rs.Count != 0)
+                    ShowResult(rs);
+                else
+                    MessageBox.Show(DefineMessage.NO_PRODUCT_FOUND, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (cbbSearch.SelectedItem.ToString().Equals("Tìm kiếm theo tên"))
+            {
+                clearDataGridView();
+                List<PRODUCT> rs = db.PRODUCTs.Where(p => p.MNAME.ToLower().Contains(dataSearch.ToLower())).ToList();
+                if (rs.Count != 0)
+                    ShowResult(rs);
+                else
+                    MessageBox.Show(DefineMessage.NO_PRODUCT_FOUND, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void ShowResult(List<PRODUCT> result)
+        {
+            int i = 0;
+            foreach (PRODUCT pr in result)
+            {
+                i = dgvList.Rows.Add();
+                dgvList.Rows[i].Cells[0].Value = pr.ID;
+                dgvList.Rows[i].Cells[1].Value = pr.MNAME;
+                dgvList.Rows[i].Cells[2].Value = pr.CATEGORY;
+                dgvList.Rows[i].Cells[3].Value = pr.MANUFACTURER;
+                dgvList.Rows[i].Cells[4].Value = pr.PRICE;
+                dgvList.Rows[i].Cells[5].Value = pr.NUMBER;
+            }
         }
     }
 }

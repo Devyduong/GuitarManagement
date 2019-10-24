@@ -21,6 +21,7 @@ namespace GuitarManagement
 
         private void tbnLogin_Click(object sender, EventArgs e)
         {
+            CommonFunction.deleteFolder(CommonFunction.getProductImagePath() + @"temp");
             this.Hide();
             FmDashboard fmDashboard = new FmDashboard();
             fmDashboard.Show();

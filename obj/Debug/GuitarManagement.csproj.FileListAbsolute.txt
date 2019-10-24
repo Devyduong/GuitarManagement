@@ -16,3 +16,5 @@ C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.exe
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.pdb
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Product.FmAddProduct.resources
+C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Product.FmEditProduct.resources
+C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Product.FmDetail.resources

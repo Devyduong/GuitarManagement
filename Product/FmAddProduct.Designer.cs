@@ -378,6 +378,7 @@
             // 
             // tbManufactor
             // 
+            this.tbManufactor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbManufactor.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbManufactor.Location = new System.Drawing.Point(140, 248);
             this.tbManufactor.MaxLength = 100;
@@ -478,12 +479,14 @@
             // 
             // tbId
             // 
+            this.tbId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbId.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbId.Location = new System.Drawing.Point(140, 70);
             this.tbId.MaxLength = 15;
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(326, 25);
             this.tbId.TabIndex = 1;
+            this.tbId.Leave += new System.EventHandler(this.tbId_Leave);
             // 
             // label1
             // 
@@ -545,10 +548,10 @@
             this.pbAvatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbAvatar.BackgroundImage")));
             this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAvatar.Location = new System.Drawing.Point(963, 1);
+            this.pbAvatar.Location = new System.Drawing.Point(966, 1);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.Size = new System.Drawing.Size(372, 518);
-            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAvatar.TabIndex = 1;
             this.pbAvatar.TabStop = false;
             // 
@@ -558,17 +561,18 @@
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Controls.Add(this.tbDescription);
             this.panel11.Controls.Add(this.label8);
-            this.panel11.Location = new System.Drawing.Point(488, 0);
+            this.panel11.Location = new System.Drawing.Point(490, 0);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(470, 605);
             this.panel11.TabIndex = 0;
             // 
             // tbDescription
             // 
+            this.tbDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbDescription.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDescription.Location = new System.Drawing.Point(1, 38);
+            this.tbDescription.Location = new System.Drawing.Point(4, 70);
             this.tbDescription.Name = "tbDescription";
-            this.tbDescription.Size = new System.Drawing.Size(464, 559);
+            this.tbDescription.Size = new System.Drawing.Size(458, 528);
             this.tbDescription.TabIndex = 7;
             this.tbDescription.Text = "";
             // 

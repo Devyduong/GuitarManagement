@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="CommonDefine\CommonDefines.cs" />
     <Compile Include="CommonDefine\CommonFunction.cs" />
+    <Compile Include="CommonDefine\DataUtil.cs" />
     <Compile Include="CommonDefine\DefineMessage.cs" />
     <Compile Include="DataAccess\BILL.cs" />
     <Compile Include="DataAccess\BILLDETAIL.cs" />
@@ -89,6 +90,18 @@
     <Compile Include="Product\FmAddProduct.Designer.cs">
       <DependentUpon>FmAddProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product\FmDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\FmDetail.Designer.cs">
+      <DependentUpon>FmDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\FmEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\FmEditProduct.Designer.cs">
+      <DependentUpon>FmEditProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product\FmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +121,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Product\FmAddProduct.resx">
       <DependentUpon>FmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\FmDetail.resx">
+      <DependentUpon>FmDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\FmEditProduct.resx">
+      <DependentUpon>FmEditProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product\FmProduct.resx">
       <DependentUpon>FmProduct.cs</DependentUpon>

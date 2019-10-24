@@ -35,10 +35,15 @@ namespace GuitarManagement.Product
         {
             try
             {
+                if(checkExistId(tbId.Text))
+                    MessageBox.Show(DefineMessage.ID_INVALID, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if(!validateInputEntered())
+                    MessageBox.Show(DefineMessage.INVALID_DATA, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 // Tạo product mới
                 PRODUCT product = new PRODUCT();
                 product.ID = tbId.Text;
-                product.IMAGES = product.ID + avatarExtention;
+                if(pbAvatar.Image != null)
+                    product.IMAGES = product.ID + avatarExtention;
                 product.MNAME = tbName.Text;
                 product.CATEGORY = cbbCategory.SelectedItem.ToString();
                 product.MANUFACTURER = tbManufactor.Text;
@@ -64,12 +69,22 @@ namespace GuitarManagement.Product
             }
             catch(Exception ex)
             {
-                
+                MessageBox.Show(DefineMessage.ERROR_OCCURED, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            tbId.Text = "";
+            tbName.Text = "";
+            tbManufactor.Text = "";
+            tbNumber.Text = "";
+            tbPrice.Text = "";
+            lbPhotoName.Text = "";
+            tbDescription.Text = "";
+
+            cbbCategory.SelectedItem = CommonFunction.getProductCategory().ElementAt(0);
+            pbAvatar.Image = null;
 
         }
 
@@ -91,7 +106,7 @@ namespace GuitarManagement.Product
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show(DefineMessage.ERROR_OCCURED, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -131,7 +146,39 @@ namespace GuitarManagement.Product
             }
             catch(Exception ex)
             {
+                MessageBox.Show(DefineMessage.ERROR_OCCURED, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
 
+        private bool validateInputEntered()
+        {
+            if (!DataUtil.IsNumber(tbPrice.Text))
+            {
+                return false;
+            }
+            if (!DataUtil.IsNumber(tbNumber.Text))
+            {
+                return false;
+            }
+            return true;
+        }
+        private bool checkExistId(string pId)
+        {
+            if (pId == "")
+                return false;
+            PRODUCT pr = db.PRODUCTs.Where(p => p.ID.Equals(pId)).FirstOrDefault();
+            if (pr == null)
+                return false;
+            else
+                return true;
+        }
+
+        private void tbId_Leave(object sender, EventArgs e)
+        {
+            if (checkExistId(tbId.Text))
+            {
+                MessageBox.Show(DefineMessage.ID_INVALID, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                tbId.Select();
             }
         }
     }

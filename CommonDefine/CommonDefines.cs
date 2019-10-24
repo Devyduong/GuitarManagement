@@ -15,5 +15,7 @@ namespace GuitarManagement.CommonDefine
         //Form Product
         public const string PRODUCT_MANAGEMENT = "DANH MỤC QUẢN LÍ SẢN PHẨM";
         public const string ADD_PRODUCT = "THÊM SẢN PHẨM MỚI";
+        public const string DETAIL_PRODUCT = "THÔNG TIN CHI TIẾT VỀ SẢN PHẨM";
+        public const string EDIT_PRODUCT = "CHỈNH SỬA THÔNG TIN SẢN PHẨM";
     }
 }

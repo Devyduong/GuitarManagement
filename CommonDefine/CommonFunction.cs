@@ -16,6 +16,7 @@ namespace GuitarManagement.CommonDefine
             {
                 "Classical Guitar",
                 "Acoustic Guitar",
+                "Electric Guitar",
                 "Ukulele",
                 "Capo",
                 "Dây đàn"
@@ -47,6 +48,27 @@ namespace GuitarManagement.CommonDefine
         public static string getFileExtention(OpenFileDialog fileDialog)
         {
             return Path.GetExtension(fileDialog.FileName);
+        }
+        public static void createTempFolder(string path)
+        {
+            Directory.CreateDirectory(path + "temp");
+        }
+        public static void createTempImage(string path, string imageName, string extention)
+        {
+            File.Copy(path + imageName + extention, path + @"temp\" + imageName + "Temp" + extention, true);
+        }
+        public static void deleteFolder(string path)
+        {
+            DirectoryInfo di = new DirectoryInfo(path);
+
+            foreach (FileInfo file in di.GetFiles())
+            {
+                file.Delete();
+            }
+            foreach (DirectoryInfo dir in di.GetDirectories())
+            {
+                dir.Delete(true);
+            }
         }
     }
 }

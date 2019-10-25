@@ -20,7 +20,7 @@ namespace GuitarManagement.DataAccess
         [StringLength(20)]
         public string BUYERPHONENUMBER { get; set; }
 
-        public int? PRODUCT { get; set; }
+        public string PRODUCT { get; set; }
 
         public int? PRODUCTNUMBER { get; set; }
 

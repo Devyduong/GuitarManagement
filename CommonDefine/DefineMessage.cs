@@ -21,6 +21,8 @@ namespace GuitarManagement.CommonDefine
         public const string RECORD_NOT_EXIST = "Bản ghi này không tồn tại";
         public const string NO_PRODUCT_FOUND = "Không tìm thấy sản phẩm nào";
         public const string INVALID_DATA = "Có dữ liệu không hợp lệ";
+        public const string OUT_OF_STOCK = "Đã hết hàng";
+        public const string NOT_ENOUGH_PRODUCT = "Số lượng sản phẩm còn lại trong kho ít hơn số lượng sản phẩm yêu cầu";
 
     }
 }

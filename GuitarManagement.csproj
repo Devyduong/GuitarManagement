@@ -72,6 +72,7 @@
       <DependentUpon>FmEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Enums\EnumSearch.cs" />
+    <Compile Include="Enums\RoleEnum.cs" />
     <Compile Include="FmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +111,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sale\FmAddSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FmAddSale.Designer.cs">
+      <DependentUpon>FmAddSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FmEditSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FmEditSale.Designer.cs">
+      <DependentUpon>FmEditSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FmSale.Designer.cs">
+      <DependentUpon>FmSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FmSaleDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FmSaleDetail.Designer.cs">
+      <DependentUpon>FmSaleDetail.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Employee\FmEmployee.resx">
       <DependentUpon>FmEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +165,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Sale\FmAddSale.resx">
+      <DependentUpon>FmAddSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FmEditSale.resx">
+      <DependentUpon>FmEditSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FmSale.resx">
+      <DependentUpon>FmSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FmSaleDetail.resx">
+      <DependentUpon>FmSaleDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -157,10 +194,10 @@
   <ItemGroup>
     <Content Include="Images\archtop_guitar_icon.png" />
     <Content Include="Images\background_loginform.jpg" />
+    <Content Include="Images\save-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ProductImages\" />
-    <Folder Include="Sale\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

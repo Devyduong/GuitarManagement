@@ -1,6 +1,7 @@
 ﻿using GuitarManagement.CommonDefine;
 using GuitarManagement.Employee;
 using GuitarManagement.Product;
+using GuitarManagement.Sale;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,9 +45,9 @@ namespace GuitarManagement
 
         private void btnSale_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            //FmSale fmSale = new FmSale();
-            //fmSale.Show();
+            this.Close();
+            FmSale fmSale = new FmSale();
+            fmSale.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

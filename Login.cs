@@ -22,9 +22,16 @@ namespace GuitarManagement
         private void tbnLogin_Click(object sender, EventArgs e)
         {
             CommonFunction.deleteFolder(CommonFunction.getProductImagePath() + @"temp");
-            this.Hide();
-            FmDashboard fmDashboard = new FmDashboard();
-            fmDashboard.Show();
+
+            if (CommonFunction.checkLogin(tbUsername.Text, tbPassword.Text))
+            {
+                CommonDefines.currentUser = tbUsername.Text;
+                this.Hide();
+                FmDashboard fmDashboard = new FmDashboard();
+                fmDashboard.Show();
+            }
+            else
+                MessageBox.Show(DefineMessage.LOGIN_FAIL, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

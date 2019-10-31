@@ -13,7 +13,8 @@ namespace GuitarManagement.DataAccess
 
         public int? BILLID { get; set; }
 
-        public int? PRODUCTID { get; set; }
+        [StringLength(15)]
+        public string PRODUCTID { get; set; }
 
         public int? NUMBER { get; set; }
 

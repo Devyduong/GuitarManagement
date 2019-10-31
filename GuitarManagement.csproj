@@ -73,11 +73,31 @@
     </Compile>
     <Compile Include="Enums\EnumSearch.cs" />
     <Compile Include="Enums\RoleEnum.cs" />
+    <Compile Include="Enums\SearchImportOption.cs" />
+    <Compile Include="Enums\SearchSaleOption.cs" />
     <Compile Include="FmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FmDashboard.Designer.cs">
       <DependentUpon>FmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\AddBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\AddBill.Designer.cs">
+      <DependentUpon>AddBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\FmEditBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\FmEditBill.Designer.cs">
+      <DependentUpon>FmEditBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\FmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\FmImport.Designer.cs">
+      <DependentUpon>FmImport.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -140,6 +160,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmDashboard.resx">
       <DependentUpon>FmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\AddBill.resx">
+      <DependentUpon>AddBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\FmEditBill.resx">
+      <DependentUpon>FmEditBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\FmImport.resx">
+      <DependentUpon>FmImport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

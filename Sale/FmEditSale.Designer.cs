@@ -37,9 +37,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnViewDetail = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnDetail = new System.Windows.Forms.Button();
             this.lbNumber = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -79,8 +76,6 @@
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.panel5.SuspendLayout();
-            this.btnViewDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -175,7 +170,6 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.btnViewDetail);
             this.panel5.Controls.Add(this.lbNumber);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.label11);
@@ -191,40 +185,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(691, 487);
             this.panel5.TabIndex = 8;
-            // 
-            // btnViewDetail
-            // 
-            this.btnViewDetail.Controls.Add(this.pictureBox4);
-            this.btnViewDetail.Controls.Add(this.btnDetail);
-            this.btnViewDetail.Location = new System.Drawing.Point(541, 441);
-            this.btnViewDetail.Name = "btnViewDetail";
-            this.btnViewDetail.Size = new System.Drawing.Size(138, 41);
-            this.btnViewDetail.TabIndex = 32;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 33);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
-            // btnDetail
-            // 
-            this.btnDetail.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnDetail.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetail.ForeColor = System.Drawing.Color.White;
-            this.btnDetail.Location = new System.Drawing.Point(0, 0);
-            this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(131, 41);
-            this.btnDetail.TabIndex = 3;
-            this.btnDetail.Text = "Xem chi tiết";
-            this.btnDetail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDetail.UseVisualStyleBackColor = false;
-            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // lbNumber
             // 
@@ -656,8 +616,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.btnViewDetail.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -685,9 +643,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pbAvatar;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel btnViewDetail;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button btnDetail;
         private System.Windows.Forms.Label lbNumber;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;

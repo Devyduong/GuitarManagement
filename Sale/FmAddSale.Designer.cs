@@ -45,6 +45,8 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.lbTotalFee = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,9 +63,6 @@
             this.tbName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnViewDetail = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnDetail = new System.Windows.Forms.Button();
             this.lbNumber = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -75,8 +74,6 @@
             this.lbName = new System.Windows.Forms.Label();
             this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lbTotalFee = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -90,8 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.btnViewDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -286,6 +281,29 @@
             this.panel9.Size = new System.Drawing.Size(645, 487);
             this.panel9.TabIndex = 4;
             // 
+            // lbTotalFee
+            // 
+            this.lbTotalFee.AutoSize = true;
+            this.lbTotalFee.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalFee.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lbTotalFee.Location = new System.Drawing.Point(211, 300);
+            this.lbTotalFee.Name = "lbTotalFee";
+            this.lbTotalFee.Size = new System.Drawing.Size(63, 22);
+            this.lbTotalFee.TabIndex = 29;
+            this.lbTotalFee.Text = "0 VNĐ";
+            this.lbTotalFee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label15.Location = new System.Drawing.Point(121, 303);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(77, 19);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "Tổng tiền ";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -447,7 +465,6 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.btnViewDetail);
             this.panel5.Controls.Add(this.lbNumber);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.label11);
@@ -463,40 +480,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(691, 487);
             this.panel5.TabIndex = 5;
-            // 
-            // btnViewDetail
-            // 
-            this.btnViewDetail.Controls.Add(this.pictureBox4);
-            this.btnViewDetail.Controls.Add(this.btnDetail);
-            this.btnViewDetail.Location = new System.Drawing.Point(541, 441);
-            this.btnViewDetail.Name = "btnViewDetail";
-            this.btnViewDetail.Size = new System.Drawing.Size(138, 41);
-            this.btnViewDetail.TabIndex = 32;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 33);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
-            // btnDetail
-            // 
-            this.btnDetail.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnDetail.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetail.ForeColor = System.Drawing.Color.White;
-            this.btnDetail.Location = new System.Drawing.Point(0, 0);
-            this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(131, 41);
-            this.btnDetail.TabIndex = 3;
-            this.btnDetail.Text = "Xem chi tiết";
-            this.btnDetail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDetail.UseVisualStyleBackColor = false;
-            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // lbNumber
             // 
@@ -617,29 +600,6 @@
             this.label8.Text = "THÔNG TIN CHI TIẾT SẢN PHẨM";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label15.Location = new System.Drawing.Point(121, 303);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 19);
-            this.label15.TabIndex = 21;
-            this.label15.Text = "Tổng tiền ";
-            // 
-            // lbTotalFee
-            // 
-            this.lbTotalFee.AutoSize = true;
-            this.lbTotalFee.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalFee.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lbTotalFee.Location = new System.Drawing.Point(211, 300);
-            this.lbTotalFee.Name = "lbTotalFee";
-            this.lbTotalFee.Size = new System.Drawing.Size(63, 22);
-            this.lbTotalFee.TabIndex = 29;
-            this.lbTotalFee.Text = "0 VNĐ";
-            this.lbTotalFee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // FmAddSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -670,8 +630,6 @@
             this.panel9.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.btnViewDetail.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
 
@@ -722,9 +680,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lbManufactor;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel btnViewDetail;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button btnDetail;
         private System.Windows.Forms.Label lbTotalFee;
         private System.Windows.Forms.Label label15;
     }

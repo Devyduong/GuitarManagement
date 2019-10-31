@@ -5,9 +5,11 @@ C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\bin\Debug\
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\bin\Debug\EntityFramework.xml
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.csprojAssemblyReference.cache
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Employee.FmEmployee.resources
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.FmDashboard.resources
+C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Imports.AddBill.resources
+C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Imports.FmEditBill.resources
+C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Imports.FmImport.resources
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Login.resources
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Product.FmAddProduct.resources
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Product.FmDetail.resources
@@ -17,8 +19,9 @@ C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Sale.FmAddSale.resources
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Sale.FmEditSale.resources
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Sale.FmSale.resources
+C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Sale.FmSaleDetail.resources
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.csproj.GenerateResource.cache
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.csproj.CopyComplete
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.exe
 C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.pdb
-C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.Sale.FmSaleDetail.resources
+C:\Users\T440S\Documents\Visual Studio 2019\Projects\GuitarManagement\obj\Debug\GuitarManagement.csprojAssemblyReference.cache

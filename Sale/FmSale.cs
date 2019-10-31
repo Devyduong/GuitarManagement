@@ -1,5 +1,6 @@
 ﻿using GuitarManagement.CommonDefine;
 using GuitarManagement.DataAccess;
+using GuitarManagement.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,8 @@ namespace GuitarManagement.Sale
             List<ORDER> order = db.ORDERS.Select(d => d).ToList();
             showDataGridView(order);
             lbFunctionName.Text = CommonDefines.SALE_MANAGEMENT;
+
+            cbbSearch.DataSource = SearchSaleOption.getSearchOptions();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -77,6 +80,45 @@ namespace GuitarManagement.Sale
             fmDashboard.Show();
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (cbbSearch.SelectedItem.ToString().Equals(SearchSaleOption.All))
+            {
+                List<ORDER> order = db.ORDERS.Select(d => d).ToList();
+                if (order.Count == 0)
+                    return;
+                clearDataGridView();
+                showDataGridView(order);
+            }
+            else if (cbbSearch.SelectedItem.ToString().Equals(SearchSaleOption.ByBuyer))
+            {
+                string input = tbSearch.Text;
+                if (input == "")
+                {
+                    MessageBox.Show(DefineMessage.NOT_ENTER_DATA_SEARCH, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                List<ORDER> order = db.ORDERS.Where(d => d.BUYER.Contains(input)).ToList();
+                if(order.Count == 0)
+                {
+                    MessageBox.Show(DefineMessage.NO_ORDER_FOUND, CommonDefines.MESSAGEBOX_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                clearDataGridView();
+                showDataGridView(order);
+            }
+        }
+
+        private void cbbSearch_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cbbSearch.SelectedItem.ToString().Equals(SearchSaleOption.All))
+            {
+                List<ORDER> order = db.ORDERS.Select(d => d).ToList();
+                clearDataGridView();
+                showDataGridView(order);
+            }
+        }
+
         // Các hàm dùng chung
         private string getCurrentCode()
         {
@@ -89,7 +131,7 @@ namespace GuitarManagement.Sale
             {
                 i = dgvList.Rows.Add();
                 dgvList.Rows[i].Cells[0].Value = od.ID;
-                dgvList.Rows[i].Cells[1].Value = od.SELLER;
+                dgvList.Rows[i].Cells[1].Value = CommonFunction.getUserFullName(od.SELLER);
                 dgvList.Rows[i].Cells[2].Value = od.BUYER;
                 dgvList.Rows[i].Cells[3].Value = od.PRODUCT;
                 dgvList.Rows[i].Cells[4].Value = od.PRODUCTNUMBER;
@@ -97,6 +139,10 @@ namespace GuitarManagement.Sale
                 dgvList.Rows[i].Cells[6].Value = int.Parse(od.EXCESSCASH.ToString()).ToString("C", CultureInfo.CreateSpecificCulture("vi-VN"));
                 dgvList.Rows[i].Cells[7].Value = ((DateTime)od.DATECREATE).ToString("dd/MM/yyyy");
             }
+        }
+        private void clearDataGridView()
+        {
+            dgvList.Rows.Clear();
         }
     }
 }

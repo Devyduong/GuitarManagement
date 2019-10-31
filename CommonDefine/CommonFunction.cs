@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GuitarManagement.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -69,6 +70,27 @@ namespace GuitarManagement.CommonDefine
             {
                 dir.Delete(true);
             }
+        }
+
+        public static bool checkLogin(string username, string password)
+        {
+            Model1 db = new Model1();
+            USER user = db.USERS.Where(d => d.USERNAME.Equals(username)
+                                        && d.PASSWORDS.Equals(password)).FirstOrDefault();
+            if (user == null)
+                return false;
+            return true;
+        }
+
+        public static int getRole(string username)
+        {
+            Model1 db = new Model1();
+            return (int)db.USERS.Where(d => d.USERNAME.Equals(username)).Select(s => s.ROLES).FirstOrDefault();
+        }
+        public static string getUserFullName(string username)
+        {
+            Model1 db = new Model1();
+            return db.USERS.Where(d => d.USERNAME.Equals(username)).Select(s => s.FULLNAME).FirstOrDefault();
         }
     }
 }

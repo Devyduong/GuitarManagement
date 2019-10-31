@@ -28,5 +28,9 @@ namespace GuitarManagement.CommonDefine
         public const string ADD_SALE_RECORD = "THÊM THÔNG TIN HÓA ĐƠN BÁN HÀNG MỚI";
         public const string EDIT_SALE_RECORD = "CHỈNH SỬA THÔNG TIN HÓA ĐƠN BÁN HÀNG";
         public const string SALE_DETAIL = "CHI TIẾT HÓA ĐƠN BÁN HÀNG";
+
+        // Form import
+        public const string IMPORT_MANAGEMENT = "DANH MỤC QUẢN LÍ NHẬP KHO";
+
     }
 }
